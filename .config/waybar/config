@@ -1,0 +1,21 @@
+{
+    "layer": "top",
+    "height": 30,
+    "spacing": 8,
+    "margin-top": 14,
+    "margin-left": 14,
+    "margin-right": 14,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "clock"
+    ],
+    "clock": {
+        "timezone": "Europe/Paris",
+        "format": "{:%H:%M | %d-%m-%y}"
+    }
+}
