@@ -26,5 +26,6 @@ set relativenumber
 set viminfo='10,<100,:100,%,n~/.vim/.viminfo
 set incsearch
 set termguicolors
+set bg=dark
 let g:gruvbox_italic=1
 colorscheme gruvbox
