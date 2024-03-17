@@ -12,8 +12,13 @@
         "hyprland/window"
     ],
     "modules-right": [
+        "pulseaudio",
         "clock"
     ],
+    "pulseaudio": {
+        "format": "Vol : {volume}% | Mic : {format_source}",
+        "on-click": "pavucontrol --tab=3"
+    },
     "clock": {
         "timezone": "Europe/Paris",
         "format": "{:%H:%M | %d-%m-%y}"
