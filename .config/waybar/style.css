@@ -16,6 +16,10 @@ window#waybar {
     background-color: #d3869b;
 }
 
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
 #workspaces {
     background-color: #458588;
     padding: 0em 0.5em;
