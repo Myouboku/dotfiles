@@ -2,23 +2,22 @@
 
 ## Requirements
 
-Stow : ```sudo pacman -S stow```
+Everything for a base installation of Hyprland on Arch with dotfiles ready.
+AUR helper is required.
 
-## Packages configuration
+```bash
+yay -S --needed stow pkgfile blesh zoxide thefuck vim git github-cli mangohud hyprland xdg-desktop-portal-hyprland kitty wofi waybar dolphin asdf-vm vim-gruvbox-git firefox spotify discord 1password pipewire pipewire-pulse pipewire-audio
+```
+
+## Packages configurations
 
 - Bash
-  - pkgfile (command-not-found)
-  - ble.sh
-  - zoxide
-  - asdf
-  - thefuck
 - Vim
-  - vim-gruvbox-git
 - Git
-  - github-cli
 - MangoHud
 - Hyprland
 - Wofi
+- Waybar
 
 ## Creating symlinks
 
