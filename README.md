@@ -18,6 +18,8 @@ yay -S --needed stow pkgfile blesh zoxide thefuck vim git github-cli mangohud hy
 - Hyprland
 - Wofi
 - Waybar
+- Kitty
+- Hyprpaper
 
 ## Creating symlinks
 
