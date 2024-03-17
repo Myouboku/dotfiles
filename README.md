@@ -17,6 +17,8 @@ Stow : ```sudo pacman -S stow```
 - Git
   - github-cli
 - MangoHud
+- Hyprland
+- Wofi
 
 ## Creating symlinks
 
