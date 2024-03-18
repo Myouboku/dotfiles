@@ -10,14 +10,15 @@ window#waybar {
 }
 
 #workspaces {
-    background-color: #458588;
+    background-color: #ebdbb2;
     padding: 0em 0.5em;
     color: white;
+    box-shadow: inset 0 -.2em .3em .10em #d5c4a1;
 }
 
 #workspaces button {
     padding: 0em 0.5em;
-    background-color: #83a598;
+    background-color: #bdae93;
     margin: 0.4em;
     border-radius: 10px;
     color: black;
@@ -31,7 +32,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background-color: #83a598;
+    background-color: #a89984;
     border-radius: 10px;
     color: black;
     opacity: 1;
@@ -42,6 +43,7 @@ window#waybar {
 
 #taskbar {
     background-color: #928374;
+    box-shadow: inset 0 -.2em .3em .10em #7c6f64;
 }
 
 #taskbar button {
@@ -66,6 +68,8 @@ window#waybar {
 
 #window {
     background-color: #d3869b;
+    /* box-shadow: inset -.3em -.4em .3em #b16286; */
+    box-shadow: inset 0 -.2em .3em .10em #b16286;
 }
 
 window#waybar.empty #window {
@@ -74,18 +78,22 @@ window#waybar.empty #window {
 
 #mpris {
     background-color: #b8bb26;
+    box-shadow: inset 0 -.2em .3em .10em #98971a;
 }
 
 #pulseaudio {
     background-color: #fe8019;
+    box-shadow: inset 0 -.2em .3em .10em #d65d0e;
 }
 
 #clock {
     background-color: #fabd2f;
+    box-shadow: inset 0 -.2em .3em .10em #d79921;
 }
 
 #custom-swaync {
     background-color: #fb4934;
     /* larger padding on the left because the icon isn't properly centered */
     padding: 0 1.25em 0 1em;
+    box-shadow: inset 0 -.2em .3em .10em #cc241d;
 }
