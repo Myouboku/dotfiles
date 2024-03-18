@@ -3,12 +3,7 @@ window#waybar {
     font-size: 12px;
 }
 
-#workspaces,
-#taskbar,
-#window,
-#mpris,
-#pulseaudio,
-#clock {
+.module {
     border-radius: 8px;
     padding: 0em 0.8em;
     color: black;
@@ -87,4 +82,10 @@ window#waybar.empty #window {
 
 #clock {
     background-color: #fabd2f;
+}
+
+#custom-swaync {
+    background-color: #fb4934;
+    /* larger padding on the left because the icon isn't properly centered */
+    padding: 0 1.25em 0 1em;
 }

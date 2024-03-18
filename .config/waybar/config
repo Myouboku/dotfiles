@@ -15,7 +15,8 @@
     ],
     "modules-right": [
         "pulseaudio",
-        "clock"
+        "clock",
+        "custom/swaync"
     ],
     "wlr/taskbar": {
         "icon-size": 12,
@@ -39,5 +40,11 @@
     "clock": {
         "timezone": "Europe/Paris",
         "format": "{:%H:%M | %d-%m-%y}"
+    },
+    "custom/swaync": {
+        "format": "{icon}",
+        "on-click": "swaync-client -t -sw",
+        "format-icons": "",
+        "tooltip": false
     }
 }
