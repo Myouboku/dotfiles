@@ -10,8 +10,8 @@
         "wlr/taskbar"
     ],
     "modules-center": [
-        // TODO: Add a module to display current music (check MPRIS)
-        "hyprland/window"
+        "hyprland/window",
+        "mpris"
     ],
     "modules-right": [
         "pulseaudio",
@@ -21,6 +21,16 @@
         "icon-size": 12,
         "on-click": "activate",
         "on-click-right": "close"
+    },
+    "mpris": {
+        "format": "{player_icon} {title}",
+        "format-paused": "{status_icon} {title}",
+        "player-icons": {
+            "default": "▶"
+        },
+        "status-icons": {
+            "paused": "⏸"
+        }
     },
     "pulseaudio": {
         "format": "Vol : {volume}% | Mic : {format_source}",

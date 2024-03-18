@@ -6,6 +6,7 @@ window#waybar {
 #workspaces,
 #taskbar,
 #window,
+#mpris,
 #pulseaudio,
 #clock {
     border-radius: 8px;
@@ -64,12 +65,20 @@ window#waybar {
     transition: all 0.4s ease-in-out;
 }
 
+#taskbar.empty {
+    background-color: transparent;
+}
+
 #window {
     background-color: #d3869b;
 }
 
 window#waybar.empty #window {
     background-color: transparent;
+}
+
+#mpris {
+    background-color: #b8bb26;
 }
 
 #pulseaudio {
