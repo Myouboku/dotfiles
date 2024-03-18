@@ -24,27 +24,32 @@
         "on-click-right": "close"
     },
     "mpris": {
-        "format": "{player_icon} {title}",
-        "format-paused": "{status_icon} {title}",
+        "format": "{player_icon}   {title}",
+        "format-paused": "{status_icon}   {title}",
         "player-icons": {
-            "default": "▶"
+            "default": "",
+            "spotify": ""
         },
         "status-icons": {
-            "paused": "⏸"
+            "paused": ""
         }
     },
     "pulseaudio": {
-        "format": "Vol : {volume}% | Mic : {format_source}",
-        "on-click": "pavucontrol --tab=3"
+        "format": "{icon}  {volume}%    {format_source}",
+        "on-click": "pavucontrol --tab=3",
+        "format-icons": [
+            "",
+            "",
+            " "
+        ]
     },
     "clock": {
         "timezone": "Europe/Paris",
-        "format": "{:%H:%M | %d-%m-%y}"
+        "format": "   {:%H:%M     %d-%m-%y}"
     },
     "custom/swaync": {
-        "format": "{icon}",
+        "format": "",
         "on-click": "swaync-client -t -sw",
-        "format-icons": "",
         "tooltip": false
     }
 }
