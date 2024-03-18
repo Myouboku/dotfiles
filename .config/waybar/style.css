@@ -26,8 +26,8 @@ window#waybar {
     border-radius: 10px;
     color: black;
     opacity: 0.4;
-    /* delay the transition to reduce jittery */
-    transition: all 0.4s ease-in-out 0.08s;
+    transition: all 0.4s ease-in-out;
+    min-width: 1em;
 }
 
 #workspaces button:hover {
@@ -36,11 +36,11 @@ window#waybar {
 
 #workspaces button.active {
     background-color: #83a598;
-    margin: 0.3em;
     border-radius: 10px;
     color: black;
     opacity: 1;
-    min-width: 20px;
+    /* TODO: find of fix to the jittery with min-width */
+    /* min-width: 20px; */
     transition: all 0.4s ease-in-out;
 }
 
