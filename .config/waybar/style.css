@@ -64,6 +64,7 @@ window#waybar {
 
 #taskbar.empty {
     background-color: transparent;
+    box-shadow: none;
 }
 
 #window {
@@ -74,6 +75,7 @@ window#waybar {
 
 window#waybar.empty #window {
     background-color: transparent;
+    box-shadow: none;
 }
 
 #mpris {
