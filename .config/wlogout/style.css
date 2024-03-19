@@ -1,0 +1,45 @@
+window {
+	background-color: rgba(12, 12, 12, 0.9);
+}
+
+button {
+	border: 4px solid #D65D0E;
+	border-radius: 30px;
+	color: #D65D0E;
+	background-color: #504945;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+	opacity: .75;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+button:focus,
+button:active,
+button:hover {
+	background-color: #BDAE93;
+	outline-style: none;
+	opacity: 1;
+	transition: all .2s ease-out;
+}
+
+#lock {
+	background-image: image(url("./lock-solid.svg"));
+}
+
+#logout {
+	background-image: image(url("./right-from-bracket-solid.svg"));
+}
+
+#sleep {
+	background-image: image(url("./moon-solid.svg"));
+}
+
+#shutdown {
+	background-image: image(url("./power-off-solid.svg"));
+}
+
+#reboot {
+	background-image: image(url("./rotate-right-solid.svg"));
+}
