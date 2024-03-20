@@ -1,101 +1,69 @@
+@import "mocha.css";
+
 window#waybar {
-    background-color: rgba(0, 0, 0, 0);
     font-size: 12px;
+    font-weight: bold;
+    background-color: transparent;
 }
 
-.module {
-    border-radius: 8px;
-    padding: 0em 0.8em;
-    color: black;
+#workspaces,
+#window,
+.modules-right {
+    color: @text;
+    box-shadow: 0 0 .5em @surface0;
+    margin: 16px 16px;
+    padding: 0 1em;
+    border: 2px solid @crust;
+    border-radius: 15px;
+    background-color: @base;
 }
 
 #workspaces {
-    background-color: #ebdbb2;
-    padding: 0em 0.5em;
-    color: white;
-    box-shadow: inset 0 -.2em .3em .10em #d5c4a1;
+    padding: 2px;
 }
 
 #workspaces button {
-    padding: 0em 0.5em;
-    background-color: #bdae93;
-    margin: 0.4em;
-    border-radius: 10px;
-    color: black;
-    opacity: 0.4;
-    transition: all 0.4s ease-in-out;
-    min-width: 1em;
-}
-
-#workspaces button:hover {
-    opacity: 0.7;
+    border-color: transparent;
+    border-radius: 100%;
+    background-color: @lavender;
+    font-size: 0;
+    margin: 5px;
+    padding: 6px;
+    transition: ease-out .2s;
+    opacity: .7;
 }
 
 #workspaces button.active {
-    background-color: #a89984;
-    border-radius: 10px;
-    color: black;
+    background-color: @pink;
+    transition: ease-out .2s;
     opacity: 1;
-    /* TODO: find of fix to the jittery with min-width */
-    /* min-width: 20px; */
-    transition: all 0.4s ease-in-out;
 }
 
-#taskbar {
-    background-color: #928374;
-    box-shadow: inset 0 -.2em .3em .10em #7c6f64;
+#workspaces button:hover {
+    transition: ease-out .2s;
+    opacity: 1;
 }
 
 #taskbar button {
-    background-color: #282828;
-    opacity: 0.4;
-    margin: 0.4em;
-    transition: all 0.4s ease-in-out;
+    border-color: transparent;
+    transition: ease .1s;
 }
 
 #taskbar button:hover {
-    opacity: 0.7;
-}
-
-#taskbar button.active {
-    opacity: 1;
-    transition: all 0.4s ease-in-out;
-}
-
-#taskbar.empty {
-    background-color: transparent;
-    box-shadow: none;
-}
-
-#window {
-    background-color: #d3869b;
-    /* box-shadow: inset -.3em -.4em .3em #b16286; */
-    box-shadow: inset 0 -.2em .3em .10em #b16286;
+    margin-top: -10px;
 }
 
 window#waybar.empty #window {
     background-color: transparent;
+    border-color: transparent;
     box-shadow: none;
 }
 
-#mpris {
-    background-color: #b8bb26;
-    box-shadow: inset 0 -.2em .3em .10em #98971a;
-}
-
 #pulseaudio {
-    background-color: #fe8019;
-    box-shadow: inset 0 -.2em .3em .10em #d65d0e;
+    color: @teal;
 }
 
 #clock {
-    background-color: #fabd2f;
-    box-shadow: inset 0 -.2em .3em .10em #d79921;
-}
-
-#custom-swaync {
-    background-color: #fb4934;
-    /* larger padding on the left because the icon isn't properly centered */
-    padding: 0 1.25em 0 1em;
-    box-shadow: inset 0 -.2em .3em .10em #cc241d;
+    color: @peach;
+    margin-left: 1em;
 }
