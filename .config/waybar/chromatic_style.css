@@ -31,20 +31,21 @@ window#waybar {
 
 #workspaces {
     background:
-        linear-gradient(to right, #262e30) padding-box,
-        linear-gradient(to left,
-            #ffadf3,
-            #dbbaff,
-            #b3c6ff,
-            #8fcfff,
-            #78d5ff,
-            #89d8ff,
-            #98dbff,
-            #a6deff,
-            #cae1ff,
-            #e6e7ff,
-            #f7eefd,
-            #fff9fd) border-box;
+        linear-gradient(90deg, #262e30) padding-box,
+        linear-gradient(-90deg,
+            #ffadf3 0%,
+            #c4c2ff 14%,
+            #85d2ff 25%,
+            #6bdcf5 35%,
+            #b8dfff 42%,
+            #ebe5ff 47%,
+            #fffafd 52%,
+            #ffe0e7 57%,
+            #ffd1bd 63%,
+            #f9c785 70%,
+            #ff958a 78%,
+            #f36db9 88%,
+            #7e74f1 100%) border-box;
     background-size: 600% 600%;
     animation: gradient 10s linear infinite;
     padding: .2em .6em;
@@ -83,32 +84,34 @@ window#waybar {
     color: #414141;
     text-shadow: 1px 2px 3px #23430C;
     background:
-        linear-gradient(to right,
-            #ffadf3,
-            #dbbaff,
-            #b3c6ff,
-            #8fcfff,
-            #78d5ff,
-            #89d8ff,
-            #98dbff,
-            #a6deff,
-            #cae1ff,
-            #e6e7ff,
-            #f7eefd,
-            #fff9fd) padding-box,
-        linear-gradient(to left,
-            #ffadf3,
-            #dbbaff,
-            #b3c6ff,
-            #8fcfff,
-            #78d5ff,
-            #89d8ff,
-            #98dbff,
-            #a6deff,
-            #cae1ff,
-            #e6e7ff,
-            #f7eefd,
-            #fff9fd) border-box;
+        linear-gradient(90deg,
+            #ffadf3 0%,
+            #c4c2ff 14%,
+            #85d2ff 25%,
+            #6bdcf5 35%,
+            #b8dfff 42%,
+            #ebe5ff 47%,
+            #fffafd 52%,
+            #ffe0e7 57%,
+            #ffd1bd 63%,
+            #f9c785 70%,
+            #ff958a 78%,
+            #f36db9 88%,
+            #7e74f1 100%) padding-box,
+        linear-gradient(-90deg,
+            #ffadf3 0%,
+            #c4c2ff 14%,
+            #85d2ff 25%,
+            #6bdcf5 35%,
+            #b8dfff 42%,
+            #ebe5ff 47%,
+            #fffafd 52%,
+            #ffe0e7 57%,
+            #ffd1bd 63%,
+            #f9c785 70%,
+            #ff958a 78%,
+            #f36db9 88%,
+            #7e74f1 100%) border-box;
     background-size: 600% 600%;
     animation: gradient 10s linear infinite;
     padding: .8em 1em;
@@ -125,20 +128,21 @@ window#waybar.empty #window {
     color: #FFADF3;
     text-shadow: 1px 2px 3px #23430C;
     background:
-        linear-gradient(to right, #262e30) padding-box,
-        linear-gradient(to left,
-            #ffadf3,
-            #dbbaff,
-            #b3c6ff,
-            #8fcfff,
-            #78d5ff,
-            #89d8ff,
-            #98dbff,
-            #a6deff,
-            #cae1ff,
-            #e6e7ff,
-            #f7eefd,
-            #fff9fd) border-box;
+        linear-gradient(90deg, #262e30) padding-box,
+        linear-gradient(-90deg,
+            #ffadf3 0%,
+            #c4c2ff 14%,
+            #85d2ff 25%,
+            #6bdcf5 35%,
+            #b8dfff 42%,
+            #ebe5ff 47%,
+            #fffafd 52%,
+            #ffe0e7 57%,
+            #ffd1bd 63%,
+            #f9c785 70%,
+            #ff958a 78%,
+            #f36db9 88%,
+            #7e74f1 100%) border-box;
     background-size: 600% 600%;
     animation: gradient 10s linear infinite;
     padding: .8em 1em;
