@@ -22,6 +22,13 @@ window#waybar {
     font-weight: bold;
 }
 
+#workspaces,
+#window,
+.modules-right {
+    box-shadow: 0 0 .5em #414141;
+    margin: 16px 16px;
+}
+
 #workspaces {
     background:
         linear-gradient(to right, #262e30) padding-box,
@@ -38,7 +45,7 @@ window#waybar {
             #e6e7ff,
             #f7eefd,
             #fff9fd) border-box;
-    background-size: 400% 400%;
+    background-size: 600% 600%;
     animation: gradient 10s linear infinite;
     padding: .2em .6em;
     border: 2px solid transparent;
@@ -58,7 +65,7 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    border: none;
+    border-color: transparent;
     opacity: .7;
     transition: ease-out .5s;
 }
@@ -102,7 +109,7 @@ window#waybar {
             #e6e7ff,
             #f7eefd,
             #fff9fd) border-box;
-    background-size: 400% 400%;
+    background-size: 600% 600%;
     animation: gradient 10s linear infinite;
     padding: .8em 1em;
     border: 2px solid transparent;
@@ -132,9 +139,13 @@ window#waybar.empty #window {
             #e6e7ff,
             #f7eefd,
             #fff9fd) border-box;
-    background-size: 400% 400%;
+    background-size: 600% 600%;
     animation: gradient 10s linear infinite;
     padding: .8em 1em;
     border: 2px solid transparent;
     border-radius: 50em;
+}
+
+#clock {
+    margin-left: 1em;
 }
