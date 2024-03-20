@@ -1,0 +1,140 @@
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+* {
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#workspaces {
+    background:
+        linear-gradient(to right, #262e30) padding-box,
+        linear-gradient(to left,
+            #ffadf3,
+            #dbbaff,
+            #b3c6ff,
+            #8fcfff,
+            #78d5ff,
+            #89d8ff,
+            #98dbff,
+            #a6deff,
+            #cae1ff,
+            #e6e7ff,
+            #f7eefd,
+            #fff9fd) border-box;
+    background-size: 400% 400%;
+    animation: gradient 10s linear infinite;
+    padding: .2em .6em;
+    border: 2px solid transparent;
+    border-radius: 50em;
+}
+
+#workspaces button {
+    font-size: 0px;
+    color: #414141;
+    text-shadow: 1px 2px 3px #23430C;
+    background-color: #FFADF3;
+    border-radius: 100px;
+    margin: 6px 6px;
+    padding: 10px;
+    opacity: .5;
+    transition: ease-out .5s;
+}
+
+#workspaces button:hover {
+    border: none;
+    opacity: .7;
+    transition: ease-out .5s;
+}
+
+#workspaces button.active {
+    opacity: 1;
+    transition: ease-out .5s;
+}
+
+#taskbar button:hover {
+    border-color: transparent;
+}
+
+#window {
+    color: #414141;
+    text-shadow: 1px 2px 3px #23430C;
+    background:
+        linear-gradient(to right,
+            #ffadf3,
+            #dbbaff,
+            #b3c6ff,
+            #8fcfff,
+            #78d5ff,
+            #89d8ff,
+            #98dbff,
+            #a6deff,
+            #cae1ff,
+            #e6e7ff,
+            #f7eefd,
+            #fff9fd) padding-box,
+        linear-gradient(to left,
+            #ffadf3,
+            #dbbaff,
+            #b3c6ff,
+            #8fcfff,
+            #78d5ff,
+            #89d8ff,
+            #98dbff,
+            #a6deff,
+            #cae1ff,
+            #e6e7ff,
+            #f7eefd,
+            #fff9fd) border-box;
+    background-size: 400% 400%;
+    animation: gradient 10s linear infinite;
+    padding: .8em 1em;
+    border: 2px solid transparent;
+    border-radius: 50em;
+}
+
+window#waybar.empty #window {
+    background: none;
+    border: none;
+}
+
+.modules-right {
+    color: #FFADF3;
+    text-shadow: 1px 2px 3px #23430C;
+    background:
+        linear-gradient(to right, #262e30) padding-box,
+        linear-gradient(to left,
+            #ffadf3,
+            #dbbaff,
+            #b3c6ff,
+            #8fcfff,
+            #78d5ff,
+            #89d8ff,
+            #98dbff,
+            #a6deff,
+            #cae1ff,
+            #e6e7ff,
+            #f7eefd,
+            #fff9fd) border-box;
+    background-size: 400% 400%;
+    animation: gradient 10s linear infinite;
+    padding: .8em 1em;
+    border: 2px solid transparent;
+    border-radius: 50em;
+}

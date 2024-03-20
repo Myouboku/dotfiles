@@ -1,0 +1,58 @@
+{
+    "layer": "top",
+    "height": 30,
+    "spacing": 8,
+    "margin-top": 16,
+    "margin-left": 16,
+    "margin-right": 16,
+    "modules-left": [
+        "hyprland/workspaces",
+        "wlr/taskbar"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "clock"
+    ],
+    "hyprland/workspaces": {
+        "format": "",
+        "all-outputs": true,
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": []
+        }
+    },
+    "hyprland/window": {
+        "format": "{title}",
+        "on-click": "toggle-maximize",
+        "on-click-right": "close"
+    },
+    "wlr/taskbar": {
+        "icon-size": 22,
+        "on-click": "activate",
+        "on-click-right": "close"
+    },
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "on-click": "pavucontrol --tab=3",
+        "format-icons": [
+            "",
+            "",
+            " "
+        ]
+    },
+    "clock": {
+        "timezone": "Europe/Paris",
+        "format": "{:%H:%M}"
+    }
+}
