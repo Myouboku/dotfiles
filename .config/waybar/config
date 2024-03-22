@@ -10,6 +10,7 @@
     ],
     "modules-right": [
         "pulseaudio",
+        // "wireplumber",
         "clock"
     ],
     "hyprland/workspaces": {
@@ -41,12 +42,23 @@
     "pulseaudio": {
         "format": "{icon}  {volume}%",
         "on-click": "pavucontrol --tab=3",
+        "scroll-step": 2,
         "format-icons": [
             "",
             "",
             " "
         ]
     },
+    // "wireplumber": {
+    //     "format": "{icon}  {volume}%",
+    //     "on-click": "pavucontrol --tab=3",
+    //     "scroll-step": 2,
+    //     "format-icons": [
+    //         "",
+    //         "",
+    //         " "
+    //     ]
+    // },
     "clock": {
         "timezone": "Europe/Paris",
         "format": "   {:%H:%M}"
