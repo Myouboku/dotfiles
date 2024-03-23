@@ -35,7 +35,7 @@
         "on-click-right": "close"
     },
     "wlr/taskbar": {
-        "icon-size": 22,
+        "icon-size": 24,
         "on-click": "activate",
         "on-click-right": "close"
     },

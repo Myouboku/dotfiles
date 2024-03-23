@@ -14,7 +14,7 @@ window#waybar {
     margin: 16px 16px;
     padding: 0 1em;
     border: 2px solid @crust;
-    border-radius: 15px;
+    border-radius: 20px;
     background-color: @base;
 }
 
@@ -27,8 +27,9 @@ window#waybar {
     border-radius: 100%;
     background-color: @pink;
     font-size: 0;
+    min-height: 7px;
+    min-width: 0;
     margin: 5px;
-    padding: 6px;
     transition: ease-out .2s;
     opacity: .7;
 }
@@ -59,10 +60,13 @@ window#waybar {
 #taskbar button {
     border-color: transparent;
     transition: ease .1s;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 #taskbar button:hover {
     margin-top: -10px;
+    box-shadow: none;
 }
 
 window#waybar.empty #window {
