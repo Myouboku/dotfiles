@@ -6,7 +6,7 @@ Everything for a base installation of Hyprland on Arch with dotfiles ready.
 AUR helper is required.
 
 ```bash
-yay -S --needed stow pkgfile blesh zoxide thefuck vim git github-cli mangohud hyprland hyprpicker hyprpaper xdg-desktop-portal-hyprland kitty wofi waybar dolphin asdf-vm vim-gruvbox-git firefox spotify discord 1password pipewire pipewire-pulse pipewire-audio wireplumber cliphist swaync wlogout
+yay -S --needed stow pkgfile blesh zoxide thefuck vim git github-cli mangohud hyprland hyprpicker hyprpaper hyprshot xdg-desktop-portal-hyprland kitty wofi waybar dolphin asdf-vm vim-gruvbox-git firefox spotify discord 1password pipewire pipewire-pulse pipewire-audio wireplumber cliphist swaync wlogout
 ```
 
 ## Packages configurations
