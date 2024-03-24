@@ -2,9 +2,6 @@
 # ~/.bashrc
 #
 
-# Need to stay at the top of the file
-[[ $- == *i* ]] && source /usr/share/blesh/ble.sh --noattach
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -26,7 +23,5 @@ source /usr/share/doc/pkgfile/command-not-found.bash
 # Execs
 eval "$(zoxide init bash)"
 eval $(thefuck --alias fuck)
+eval "$(starship init bash)"
 . /opt/asdf-vm/asdf.sh
-
-# Need to stay at the end of the file
-[[ ${BLE_VERSION-} ]] && ble-attach
