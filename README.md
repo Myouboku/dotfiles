@@ -6,14 +6,18 @@ Everything for a base installation of Hyprland on Arch with dotfiles ready.
 AUR helper is required.
 
 ```bash
-yay -S --needed stow pkgfile zoxide thefuck vim git github-cli mangohud hyprland hyprpicker hyprpaper hyprshot xdg-desktop-portal-hyprland kitty wofi waybar dolphin asdf-vm vim-gruvbox-git firefox spotify discord 1password pipewire pipewire-pulse pipewire-audio wireplumber cliphist swaync wlogout btop qt6ct kvantum nwg-look starship
+yay -S --needed stow pkgfile zoxide thefuck vim git github-cli mangohud hyprland hyprpicker hyprpaper hyprshot xdg-desktop-portal-hyprland kitty wofi waybar dolphin asdf-vm vim-gruvbox-git firefox spotify discord 1password pipewire pipewire-pulse pipewire-audio wireplumber cliphist swaync wlogout btop qt6ct kvantum nwg-look starship bash-completion neovim ripgrep lazygit
 ```
+
+NvChad must be installed for Neovim to work properly
 
 ## Packages configurations
 
 - [Bash](https://www.gnu.org/software/bash/)
 - [Git](https://git-scm.com/)
 - [Vim](https://www.vim.org/)
+- [Neovim](https://neovim.io/)
+- [NvChad](https://nvchad.com/)
 - [MangoHud](https://github.com/flightlessmango/MangoHud)
 - [Hyprland](https://hyprland.org/)
 - [Wofi](https://hg.sr.ht/~scoopta/wofi)
