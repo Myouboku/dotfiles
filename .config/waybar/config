@@ -41,7 +41,7 @@
     },
     "pulseaudio": {
         "format": "{icon}  {volume}%",
-        "on-click": "pavucontrol --tab=3",
+        "on-click": "pkill pavucontrol || pavucontrol --tab=3",
         "scroll-step": 2,
         "format-icons": [
             "",
