@@ -16,6 +16,7 @@ alias v='nvim'
 alias e='exit'
 alias c='clear'
 alias p='pwd'
+alias sus='loginctl lock-session && systemctl suspend'
 
 # Sources
 source /usr/share/doc/pkgfile/command-not-found.bash
