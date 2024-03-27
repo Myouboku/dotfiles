@@ -15,18 +15,18 @@ NvChad must be installed for Neovim to work properly
 
 - [Bash](https://www.gnu.org/software/bash/)
 - [Git](https://git-scm.com/)
-- [Vim](https://www.vim.org/)
+- [Hyprland](https://hyprland.org/)
+- [Hyprpaper](https://github.com/hyprwm/hyprpaper)
+- [Kitty](https://sw.kovidgoyal.net/kitty/)
+- [MangoHud](https://github.com/flightlessmango/MangoHud)
 - [Neovim](https://neovim.io/)
 - [NvChad](https://nvchad.com/)
-- [MangoHud](https://github.com/flightlessmango/MangoHud)
-- [Hyprland](https://hyprland.org/)
-- [Wofi](https://hg.sr.ht/~scoopta/wofi)
-- [Waybar](https://github.com/Alexays/Waybar)
-- [Kitty](https://sw.kovidgoyal.net/kitty/)
-- [Hyprpaper](https://github.com/hyprwm/hyprpaper)
-- [Wlogout](https://github.com/ArtsyMacaw/wlogout)
-- [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter)
 - [Starship](https://starship.rs/)
+- [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter)
+- [Vim](https://www.vim.org/)
+- [Waybar](https://github.com/Alexays/Waybar)
+- [Wlogout](https://github.com/ArtsyMacaw/wlogout)
+- [Wofi](https://hg.sr.ht/~scoopta/wofi)
 
 ## Theme used
 
