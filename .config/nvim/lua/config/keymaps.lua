@@ -5,3 +5,9 @@
 local set = vim.keymap.set
 
 set("i", "jk", "<Esc>")
+set("n", "<A-g>", function()
+    LazyVim.lazygit({ cwd = LazyVim.root.git() })
+end)
+set("n", "<A-G>", function()
+    LazyVim.lazygit()
+end)
