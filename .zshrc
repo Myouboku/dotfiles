@@ -114,14 +114,38 @@ function help() {
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
 
-# Liste all available updates through pacman, the AUR and flatpak
+function formatToTable() {
+  (echo -e "Name\tApplication ID\tVersion\tBranch\tArch"; cat $1) |
+    sed 's/\t/;/g' |
+    column -s ';' -t
+}
+
+# List all available updates through pacman, the AUR and flatpak
 function cu() {
+  pacmanFile="/tmp/pacmanUpdates.txt"
+  aurFile="/tmp/aurUpdates.txt"
+  flatpakFile="/tmp/flatpakUpdates.txt"
+
+  printf '%*s\n' "$(tput cols)" '' | tr ' ' '-'
+
   echo -e "${BIYellow}Pacman :${Color_Off}\n"
-  checkupdates
+  checkupdates | tee $pacmanFile
+  echo "\n${BIYellow}MAJ disponibles : $(cat $pacmanFile | wc -l)${Color_Off}"
 
-  echo -e "\n${BIBlue}AUR :${Color_Off}\n"
-  yay -Qua
+  printf '%*s\n' "$(tput cols)" '' | tr ' ' '-'
 
-  echo -e "\n${BIPurple}Flatpak :${Color_Off}\n"
-  flatpak remote-ls --updates
+  echo -e "${BIBlue}AUR :${Color_Off}\n"
+  yay -Qua --color=always | tee $aurFile
+  echo "\n${BIBlue}MAJ disponibles : $(cat $aurFile | wc -l)${Color_Off}"
+
+  printf '%*s\n' "$(tput cols)" '' | tr ' ' '-'
+
+  echo -e "${BIPurple}Flatpak :${Color_Off}\n"
+  flatpak remote-ls --updates > $flatpakFile
+  formatToTable $flatpakFile
+  echo "\n${BIPurple}MAJ disponibles : $(cat $flatpakFile | wc -l)${Color_Off}"
+
+  printf '%*s\n' "$(tput cols)" '' | tr ' ' '-'
+
+  echo -e "${IRed}Nombre total de MAJ disponibles : $(cat $pacmanFile $aurFile $flatpakFile | wc -l)${Color_Off}"
 }
