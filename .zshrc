@@ -83,13 +83,19 @@ alias mkdir='mkdir -p'
 pokemon-colorscripts --no-title -r 1,3,6
 
 eval "$(zoxide init zsh)"
-source <(fzf --zsh)
 eval $(thefuck --alias)
 
+# TODO configure fzf
+## fzf configuration
+source <(fzf --zsh)
+export FZF_DEFAULT_OPTS='--preview "bat --color=always --line-range=:500 {}"'
+
+## nvm node manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+## yazi memorise directory on quit
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -98,3 +104,10 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+## cat configuration
+function help() {
+    "$@" --help 2>&1 | bat --plain --language=help
+}
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"

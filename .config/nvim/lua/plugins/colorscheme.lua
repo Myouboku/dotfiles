@@ -1,9 +1,9 @@
 return {
-    "scottmckendry/cyberdream.nvim",
-    {
-        "LazyVim/LazyVim",
-        opts = {
-            colorscheme = "cyberdream",
-        },
+  "rose-pine/neovim",
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "rose-pine",
     },
+  },
 }
