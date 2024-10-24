@@ -57,6 +57,9 @@ function in {
     fi
 }
 
+# import output colors
+source .zsh_colors
+
 # Helpful aliases
 alias c='clear' # clear terminal
 alias l='eza -lh --icons=auto' # long list
@@ -64,7 +67,6 @@ alias ls='eza -1 --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias ld='eza -lhD --icons=auto' # long list dirs
 alias lt='eza --icons=auto --tree' # list folder as tree
-alias cu="checkupdates && yay -Qua" # list available updates for pacman and the AUR
 alias vc='code' # gui code editor
 alias lg='lazygit' # git tui
 
@@ -86,16 +88,16 @@ eval "$(zoxide init zsh)"
 eval $(thefuck --alias)
 
 # TODO configure fzf
-## fzf configuration
+# fzf configuration
 source <(fzf --zsh)
-export FZF_DEFAULT_OPTS='--preview "bat --color=always --line-range=:500 {}"'
+# export FZF_DEFAULT_OPTS='--preview "bat --color=always --line-range=:500 {}"'
 
-## nvm node manager
+# nvm node manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-## yazi memorise directory on quit
+# yazi memorise directory on quit
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -105,9 +107,21 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-## cat configuration
+# cat configuration
 function help() {
     "$@" --help 2>&1 | bat --plain --language=help
 }
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
+
+# Liste all available updates through pacman, the AUR and flatpak
+function cu() {
+  echo -e "${BIYellow}Pacman :${Color_Off}\n"
+  checkupdates
+
+  echo -e "\n${BIBlue}AUR :${Color_Off}\n"
+  yay -Qua
+
+  echo -e "\n${BIPurple}Flatpak :${Color_Off}\n"
+  flatpak remote-ls --updates
+}
