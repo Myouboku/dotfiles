@@ -128,24 +128,24 @@ function cu() {
 
   printf '%*s\n' "$(tput cols)" '' | tr ' ' '-'
 
-  echo -e "${BIYellow}Pacman :${Color_Off}\n"
+  echo -e "${BIYellow}$(figlet Pacman)${Color_Off}\n"
   checkupdates | tee $pacmanFile
-  echo "\n${BIYellow}MAJ disponibles : $(cat $pacmanFile | wc -l)${Color_Off}"
+  echo "\n${BIYellow}Available updates : $(cat $pacmanFile | wc -l)${Color_Off}"
 
   printf '%*s\n' "$(tput cols)" '' | tr ' ' '-'
 
-  echo -e "${BIBlue}AUR :${Color_Off}\n"
+  echo -e "${BIBlue}$(figlet AUR)${Color_Off}\n"
   yay -Qua --color=always | tee $aurFile
-  echo "\n${BIBlue}MAJ disponibles : $(cat $aurFile | wc -l)${Color_Off}"
+  echo "\n${BIBlue}Available updates : $(cat $aurFile | wc -l)${Color_Off}"
 
   printf '%*s\n' "$(tput cols)" '' | tr ' ' '-'
 
-  echo -e "${BIPurple}Flatpak :${Color_Off}\n"
+  echo -e "${BIPurple}$(figlet Flatpak)${Color_Off}\n"
   flatpak remote-ls --updates > $flatpakFile
   formatToTable $flatpakFile
-  echo "\n${BIPurple}MAJ disponibles : $(cat $flatpakFile | wc -l)${Color_Off}"
+  echo "\n${BIPurple}Available updates : $(cat $flatpakFile | wc -l)${Color_Off}"
 
   printf '%*s\n' "$(tput cols)" '' | tr ' ' '-'
 
-  echo -e "${IRed}Nombre total de MAJ disponibles : $(cat $pacmanFile $aurFile $flatpakFile | wc -l)${Color_Off}"
+  echo -e "${IRed}Total available udpates : $(cat $pacmanFile $aurFile $flatpakFile | wc -l)${Color_Off}"
 }
