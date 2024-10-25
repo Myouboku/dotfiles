@@ -147,5 +147,5 @@ function cu() {
 
   printf '%*s\n' "$(tput cols)" '' | tr ' ' '-'
 
-  echo -e "${IRed}Total available udpates : $(cat $pacmanFile $aurFile $flatpakFile | wc -l)${Color_Off}"
+  echo -e "${IRed}Total available updates : $(cat $pacmanFile $aurFile $flatpakFile | wc -l)${Color_Off}"
 }
