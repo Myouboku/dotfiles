@@ -4,7 +4,7 @@
 2. Install [HyDE (hyprdots)](https://github.com/prasanthrangan/hyprdots?tab=readme-ov-file#installation)
 3. Install the following packages
    ```bash
-   yay -S --needed stow yazi neovim lazygit zoxide thefuck fzf bat flatpak zen-browser-avx2-bin
+   yay -S --needed stow yazi neovim lazygit zoxide thefuck fzf bat flatpak zen-browser-avx2-bin ripgrep fd
    ```
 4. Get the dotfiles
    ```bash
