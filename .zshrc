@@ -58,7 +58,7 @@ function in {
 }
 
 # import output colors
-source .zsh_colors
+source ~/.zsh_colors
 
 # Helpful aliases
 alias c='clear' # clear terminal
