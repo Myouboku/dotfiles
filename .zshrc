@@ -1,3 +1,5 @@
+eval "$(starship init zsh)"
+
 export PATH=$PATH:/home/hugo/.cargo/bin
 
 # import output colors
