@@ -3,7 +3,7 @@ eval "$(starship init zsh)"
 export PATH=$PATH:/home/hugo/.cargo/bin
 
 # import output colors
-source ~/.zsh_colors
+source ~/zsh_colors
 
 # Helpful aliases
 alias c='clear' # clear terminal
@@ -21,9 +21,6 @@ alias ...='cd ../..'
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 alias mkdir='mkdir -p'
-
-# Display Pokemon
-pokemon-colorscripts --no-title -r 1,3,6
 
 eval "$(zoxide init zsh)"
 eval $(thefuck --alias)
