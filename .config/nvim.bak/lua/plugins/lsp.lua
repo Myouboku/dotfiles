@@ -6,7 +6,12 @@ return {
 	{
 		"williamboman/mason-lspconfig",
 		opts = {
-			ensure_installed = { "lua_ls", "marksman", "ts_ls" },
+			ensure_installed = {
+				"lua_ls",
+				"marksman",
+				"ts_ls",
+				"rust_analyzer",
+			},
 			handlers = {
 				function(server_name)
 					local capabilities = require("cmp_nvim_lsp").default_capabilities()

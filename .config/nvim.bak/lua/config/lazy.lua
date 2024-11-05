@@ -24,13 +24,10 @@ vim.o.shiftwidth = 4
 vim.o.rnu = true
 vim.o.scrolloff = 10
 vim.o.clipboard = "unnamedplus"
+vim.o.ignorecase = true
+vim.o.wrap = false
 
-vim.keymap.set("i", "jk", "<Esc>")
-
-vim.keymap.set("n", "<C-h>", "<C-w>h")
-vim.keymap.set("n", "<C-j>", "<C-w>j")
-vim.keymap.set("n", "<C-k>", "<C-w>k")
-vim.keymap.set("n", "<C-l>", "<C-w>l")
+require("config.keymaps")
 
 vim.api.nvim_create_autocmd("TextYankPost", {
     command = "silent! lua vim.highlight.on_yank {higroup='Visual', timeout=200}",
