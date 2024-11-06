@@ -570,6 +570,15 @@ require('lazy').setup({
         -- ts_ls = {},
         --
 
+        bashls = {
+          filetypes = { 'sh', 'zsh' },
+          settings = {
+            bashIde = {
+              globPattern = '*@(.sh|.inc|.bash|.command|.bashrc|.zshrc)',
+            },
+          },
+        },
+
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
@@ -599,6 +608,7 @@ require('lazy').setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'beautysh',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -651,6 +661,8 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        sh = { 'beautysh' },
+        zsh = { 'beautysh' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
