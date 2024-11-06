@@ -15,7 +15,6 @@ alias lt='eza --icons=auto --tree' # list folder as tree
 alias lg='lazygit' # git tui
 
 # Directory navigation shortcuts
-alias cd='z'
 alias ..='cd ..'
 alias ...='cd ../..'
 
