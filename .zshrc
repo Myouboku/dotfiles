@@ -24,10 +24,11 @@ alias mkdir='mkdir -p'
 eval "$(zoxide init zsh)"
 eval $(thefuck --alias)
 
-# TODO configure fzf
 # fzf configuration
 source <(fzf --zsh)
-# export FZF_DEFAULT_OPTS='--preview "bat --color=always --line-range=:500 {}"'
+# TODO: finish fzf configuration
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # nvm node manager
 export NVM_DIR="$HOME/.nvm"
@@ -66,16 +67,16 @@ function cu() {
 
     echo -e "${BIYellow}$(figlet Pacman)${Color_Off}\n"
     checkupdates | tee $pacmanFile
-    echo "\n${BIYellow}Available updates : $(cat $pacmanFile | wc -l)${Color_Off}"
+    echo -e "\n${BIYellow}Available updates : $(cat $pacmanFile | wc -l)${Color_Off}"
 
     echo -e "${BIBlue}$(figlet AUR)${Color_Off}\n"
     yay -Qua --color=always | tee $aurFile
-    echo "\n${BIBlue}Available updates : $(cat $aurFile | wc -l)${Color_Off}"
+    echo -e "\n${BIBlue}Available updates : $(cat $aurFile | wc -l)${Color_Off}"
 
     echo -e "${BIPurple}$(figlet Flatpak)${Color_Off}\n"
     flatpak remote-ls --updates > $flatpakFile
     formatToTable $flatpakFile
-    echo "\n${BIPurple}Available updates : $(cat $flatpakFile | wc -l)${Color_Off}"
+    echo -e "\n${BIPurple}Available updates : $(cat $flatpakFile | wc -l)${Color_Off}"
 
     echo -e "\n${IRed}Total available updates : $(cat $pacmanFile $aurFile $flatpakFile | wc -l)${Color_Off}"
 }
