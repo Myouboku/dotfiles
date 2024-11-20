@@ -10,6 +10,7 @@ export NVM_DIR="$HOME/.nvm"
 # add cargo to path
 export PATH=$PATH:/home/hugo/.cargo/bin
 
-# bat as manpager
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export MANROFFOPT="-c"
+# neovim for everything
+export VISUAL="nvim"
+export EDITOR="nvim"
+export MANPAGER="nvim +Man!"
