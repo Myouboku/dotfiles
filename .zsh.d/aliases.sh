@@ -8,3 +8,5 @@ alias lg='lazygit' # git tui
 alias ..='cd ..'
 alias ...='cd ../..'
 alias mkdir='mkdir -p'
+alias grep="grep --color=always"
+alias grepi="grep -i --color=always"
