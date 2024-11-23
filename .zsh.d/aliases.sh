@@ -10,3 +10,5 @@ alias ...='cd ../..'
 alias mkdir='mkdir -p'
 alias grep="grep --color=always"
 alias grepi="grep -i --color=always"
+alias tmuxa="tmux attach -t"
+alias tmuxn="tmux new -s"
