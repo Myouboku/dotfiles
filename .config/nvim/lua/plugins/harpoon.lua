@@ -17,10 +17,10 @@ return {
 
     vim.keymap.set('n', '<leader>ha', function()
       harpoon:list():add()
-    end)
-    vim.keymap.set('n', '<leader>hh', function()
+    end, { desc = 'Harpoon [A]dd' })
+    vim.keymap.set('n', '<leader>hl', function()
       harpoon.ui:toggle_quick_menu(harpoon:list())
-    end)
+    end, { desc = 'Harpoon [L]ist' })
 
     vim.keymap.set('n', '<A-&>', function()
       harpoon:list():select(1)
