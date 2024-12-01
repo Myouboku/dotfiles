@@ -1,5 +1,5 @@
 # ProtonVPN port redirection
-function port-forwarding () {
+port-forwarding () {
     while true; do
         date
         natpmpc -a 1 0 udp 60 -g 10.2.0.1 && \

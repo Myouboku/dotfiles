@@ -1,15 +1,15 @@
 # Reformat the flatpak output to a table
-function formatToTable() {
+formatToTable() {
     (echo -e "Name\tApplication ID\tVersion\tBranch\tArch"; cat "$1") |
     sed 's/\t/;/g' |
     column -s ';' -t
 }
 
 # List all available updates through pacman, the AUR and flatpak
-function cu() {
-    pacmanFile="/tmp/pacmanUpdates.txt"
-    aurFile="/tmp/aurUpdates.txt"
-    flatpakFile="/tmp/flatpakUpdates.txt"
+cu() {
+    local pacmanFile="/tmp/pacmanUpdates.txt"
+    local aurFile="/tmp/aurUpdates.txt"
+    local flatpakFile="/tmp/flatpakUpdates.txt"
 
     echo -e "${BIYellow}$(figlet Pacman)${Color_Off}\n"
     checkupdates | tee $pacmanFile
