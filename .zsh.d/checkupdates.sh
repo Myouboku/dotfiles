@@ -7,22 +7,42 @@ formatToTable() {
 
 # List all available updates through pacman, the AUR and flatpak
 cu() {
-    local pacmanFile="/tmp/pacmanUpdates.txt"
-    local aurFile="/tmp/aurUpdates.txt"
-    local flatpakFile="/tmp/flatpakUpdates.txt"
+    local Color_Off='\033[0m'       # Text Reset
+    local Yellow='\033[1;93m'     # Yellow
+    local Blue='\033[1;94m'       # Blue
+    local Purple='\033[1;95m'     # Purple
+    local Red='\033[1;91m'        # Red
 
-    echo -e "${BIYellow}$(figlet Pacman)${Color_Off}\n"
-    checkupdates | tee $pacmanFile
-    echo -e "\n${BIYellow}Available updates : $(cat $pacmanFile | wc -l)${Color_Off}"
+    local pacmanFile
+    local aurFile
+    local flatpakFile
+    pacmanFile=$(mktemp -t pacman.XXXXXXXX)
+    aurFile=$(mktemp -t aur.XXXXXXXX)
+    flatpakFile=$(mktemp -t flatpak.XXXXXXXX)
 
-    echo -e "${BIBlue}$(figlet AUR)${Color_Off}\n"
-    yay -Qua --color=always | tee $aurFile
-    echo -e "\n${BIBlue}Available updates : $(cat $aurFile | wc -l)${Color_Off}"
+    printf "\e${Yellow}%s\e${Color_Off}\n" "$(figlet Pacman)"
+    checkupdates | tee "$pacmanFile"
 
-    echo -e "${BIPurple}$(figlet Flatpak)${Color_Off}\n"
-    flatpak remote-ls --updates > $flatpakFile
-    formatToTable $flatpakFile
-    echo -e "\n${BIPurple}Available updates : $(cat $flatpakFile | wc -l)${Color_Off}"
+    local nbPac
+    nbPac=$(wc -l < "$pacmanFile")
+    printf "\e${Yellow}\n%s\e${Color_Off}\n" "Available updates : ${nbPac}"
 
-    echo -e "\n${IRed}Total available updates : $(cat $pacmanFile $aurFile $flatpakFile | wc -l)${Color_Off}"
+    printf "\e${Blue}%s\e${Color_Off}\n" "$(figlet AUR)"
+    yay -Qua --color=always | tee "$aurFile"
+
+    local nbAur
+    nbAur=$(wc -l < "$aurFile")
+    printf "\e${Blue}\n%s\e${Color_Off}\n" "Available updates : ${nbAur}"
+
+    printf "\e${Purple}%s\e${Color_Off}\n" "$(figlet Flatpak)"
+    flatpak remote-ls --updates > "$flatpakFile"
+    formatToTable "$flatpakFile"
+
+    local nbFlatpak
+    nbFlatpak=$(wc -l < "$flatpakFile")
+    printf "\e${Purple}\n%s\e${Color_Off}\n" "Available updates : ${nbFlatpak}"
+
+    local nbTotal
+    nbTotal=$(echo "$nbPac+$nbAur+$nbFlatpak" | bc)
+    printf "\e${Red}\n%s\e${Color_Off}\n" "Total available updates : ${nbTotal}"
 }
