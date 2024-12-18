@@ -125,10 +125,21 @@ return {
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
       local servers = {
-        ts_ls = {},
+        ts_ls = {
+          settings = {
+            preferences = {
+              javascript = {
+                suggestionActions = {
+                  enabled = false,
+                },
+              },
+            },
+          },
+        },
         jsonls = {},
         html = {},
         cssls = {},
+        eslint = {},
 
         clangd = {},
 
@@ -166,9 +177,7 @@ return {
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
         'beautysh',
-        'eslint_d',
         'prettier',
-        'prettierd',
         'cpplint',
         'clang-format',
       })
