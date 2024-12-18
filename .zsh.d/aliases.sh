@@ -21,3 +21,5 @@ alias tmuxn="tmux new -s"
 alias port-forwarding="\$HOME/scripts/port_forwarding.sh"
 alias unitstatus="\$HOME/scripts/unitstatus.sh"
 alias cu="\$HOME/scripts/checkupdates.sh"
+
+alias dev='export NODE_ENV=development && nodemon --inspect -e js,cjs,mjs,sql'
