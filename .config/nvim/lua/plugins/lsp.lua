@@ -178,6 +178,7 @@ return {
         'stylua', -- Used to format Lua code
         'beautysh',
         'prettier',
+        'prettierd',
         'cpplint',
         'clang-format',
       })
