@@ -36,7 +36,7 @@ return { -- Autoformat
       sh = { 'beautysh' },
       zsh = { 'beautysh' },
       c = { 'clang-format' },
-      javascript = { 'prettier' },
+      javascript = { 'prettierd', 'prettier', stop_after_first = true },
     },
   },
 }
