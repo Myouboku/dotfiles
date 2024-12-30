@@ -23,3 +23,5 @@ alias unitstatus="\$HOME/scripts/unitstatus.sh"
 alias cu="\$HOME/scripts/checkupdates.sh"
 
 alias dev='export NODE_ENV=development && nodemon --inspect -e js,cjs,mjs,sql'
+alias testapi='export NODE_ENV=test && npm run pretest:api && npx mocha'
+alias test='export NODE_ENV=test && npx mocha'

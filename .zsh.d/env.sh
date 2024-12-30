@@ -7,8 +7,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# add cargo to path
-export PATH=$PATH:/home/hugo/.cargo/bin:/home/hugo/bin/Sencha/Cmd
+export PATH=$PATH:$HOME/.cargo/bin:$HOME/bin/Sencha/Cmd:$HOME/.local/bin
 
 # neovim for everything
 export VISUAL="nvim"
