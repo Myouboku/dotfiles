@@ -13,3 +13,8 @@ export PATH=$PATH:$HOME/.cargo/bin:$HOME/bin/Sencha/Cmd:$HOME/.local/bin
 export VISUAL="nvim"
 export EDITOR="nvim"
 export MANPAGER="nvim +Man!"
+
+# zsh
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=100000
+export SAVEHIST=$HISTSIZE
