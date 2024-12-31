@@ -16,10 +16,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
--- Keybinds to make split navigation easier.
---  Use CTRL+<hjkl> to switch between windows
---
---  See `:help wincmd` for a list of all window commands
+-- Keybinds to make split navigation seemless with tmux
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
@@ -42,11 +39,6 @@ vim.keymap.set('n', '<C-down>', ':resize -2<cr>', {
   silent = true,
 })
 
-vim.keymap.set('n', '<leader>|', ':vsplit<cr>', {
-  desc = 'Split window vertically',
-  silent = true,
-})
-vim.keymap.set('n', '<leader>-', ':split<cr>', {
-  desc = 'Split window horizontally',
-  silent = true,
-})
+-- Raccourcis pour naviguer dans la quickfix list
+vim.api.nvim_set_keymap('n', '<A-j>', ':cnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-k>', ':cprev<CR>', { noremap = true, silent = true })
