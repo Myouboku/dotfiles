@@ -4,7 +4,7 @@ startup_mode = "Maximized"
 
 [font]
 normal = { family = "CaskaydiaCove Nerd Font Mono", style = "Regular" }
-size = 14
+size = 12
 
 [colors.primary]
 background = '#282828'

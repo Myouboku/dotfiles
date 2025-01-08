@@ -16,16 +16,16 @@ return {
       'hrsh7th/cmp-nvim-lsp',
 
       -- typescript
-      {
-        'pmizio/typescript-tools.nvim',
-        dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
-        opts = {
-          settings = {
-            expose_as_code_action = 'all',
-            complete_function_calls = true,
-          },
-        },
-      },
+      -- {
+      --   'pmizio/typescript-tools.nvim',
+      --   dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
+      --   opts = {
+      --     settings = {
+      --       expose_as_code_action = 'all',
+      --       complete_function_calls = true,
+      --     },
+      --   },
+      -- },
     },
     config = function()
       vim.api.nvim_create_autocmd('LspAttach', {
@@ -141,6 +141,7 @@ return {
         html = {},
         cssls = {},
         eslint = {},
+        ts_ls = {},
 
         clangd = {},
 
