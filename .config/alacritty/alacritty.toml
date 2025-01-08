@@ -1,6 +1,6 @@
 [window]
-# dimensions = { columns = 170, lines = 50 }
-startup_mode = "Maximized"
+dimensions = { columns = 170, lines = 50 }
+# startup_mode = "Maximized"
 
 [font]
 normal = { family = "CaskaydiaCove Nerd Font Mono", style = "Regular" }
