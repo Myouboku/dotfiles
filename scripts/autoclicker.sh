@@ -19,6 +19,6 @@ else
     # Boucle d'autoclick
     while [ -f "$CONTROL_FILE" ]; do
         YDOTOOL_SOCKET="$HOME/.ydotool_socket" ydotool click 0xC0
-        sleep 0.1
+        sleep 0.01
     done
 fi
