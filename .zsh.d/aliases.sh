@@ -24,9 +24,10 @@ alias unitstatus="\$HOME/scripts/unitstatus.sh"
 alias cu="\$HOME/scripts/checkupdates.sh"
 alias up="flatpak update && yay"
 
-alias devm='export NODE_ENV=development && nodemon --inspect -e js,cjs,mjs,sql'
+alias devm='export NODE_ENV=development && nodemon --inspect -e js,cjs,mjs,sql src/index.js'
 alias dev='export NODE_ENV=development && node --inspect src/index.js'
-alias testapi='export NODE_ENV=test && npm run pretest:api && npx mocha'
-alias test='export NODE_ENV=test && npx mocha'
+
+alias testapi='export NODE_ENV=test && npm run pretest:api && npx mocha --parallel --exit'
+alias test='export NODE_ENV=test && npx mocha --parallel --exit'
 
 alias bright='systemctl --user restart plasma-powerdevil.service'
