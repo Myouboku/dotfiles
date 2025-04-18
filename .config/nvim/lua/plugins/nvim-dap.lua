@@ -14,7 +14,10 @@ return {
           address = "localhost",
           port = 3000,
           cwd = "${workspaceFolder}/srv",
-          restart = true,
+          env = {
+            NODE_ENV = "development",
+          },
+          console = "integratedTerminal",
         },
         {
           type = "pwa-node",
@@ -26,6 +29,10 @@ return {
           port = 3000,
           cwd = "${workspaceFolder}/srv",
           restart = true,
+          env = {
+            NODE_ENV = "development",
+          },
+          console = "integratedTerminal",
         },
         {
           type = "pwa-node",
@@ -33,6 +40,10 @@ return {
           name = "Launch file",
           program = "${file}",
           cwd = "${workspaceFolder}",
+          env = {
+            NODE_ENV = "development",
+          },
+          console = "integratedTerminal",
         },
         {
           type = "pwa-node",
@@ -40,14 +51,7 @@ return {
           name = "Attach",
           processId = require("dap.utils").pick_process,
           cwd = "${workspaceFolder}",
-        },
-        {
-          type = "pwa-chrome",
-          request = "launch",
-          name = 'Start Chrome with "localhost"',
-          url = "http://localhost:3000",
-          webRoot = "${workspaceFolder}",
-          userDataDir = "${workspaceFolder}/.vscode/vscode-chrome-debug-userdatadir",
+          console = "integratedTerminal",
         },
       }
     end

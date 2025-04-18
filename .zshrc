@@ -19,3 +19,5 @@ bindkey '^[[1;5D' backward-word
 if [[ "$TERM_PROGRAM" == "ghostty" ]]; then
     export TERM=xterm-256color
 fi
+
+fastfetch
