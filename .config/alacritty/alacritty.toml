@@ -1,5 +1,5 @@
 [window]
-startup_mode = "Maximized"
+dimensions = { columns = 180, lines = 50 }
 
 [font]
 normal = { family = "CaskaydiaCove Nerd Font Mono", style = "Regular" }
