@@ -1,5 +1,11 @@
 alias c='clear'
 
+alias l='eza -lh --icons=auto'
+alias ls='eza -1 --icons=auto'
+alias la='eza -lha --icons=auto --sort=name --group-directories-first'
+alias ld='eza -lhD --icons=auto'
+alias lt='eza --icons=auto --tree'
+
 alias lg='lazygit'
 
 alias mkdir='mkdir -p'
