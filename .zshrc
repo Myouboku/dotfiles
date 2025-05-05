@@ -1,27 +1,11 @@
-eval "$(starship init zsh)"
+export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_D="$HOME/.zsh.d"
-if [[ -d "$ZSH_D" ]]; then
-    for file in "$ZSH_D"/*.sh; do
-        [[ -r "$file" ]] && source "$file"
-    done
-    unset file
-fi
+ZSH_THEME="robbyrussell"
+ENABLE_CORRECTION="true"
+HIST_STAMPS="dd/mm/yyyy"
 
-eval "$(zoxide init zsh)"
-eval "$(thefuck --alias)"
-source <(fzf --zsh)
+plugins=(git dnf node nvm npm fzf ssh ssh-agent gh zoxide thefuck tmux)
 
-bindkey '^[[1;5C' forward-word
-bindkey '^[[1;5D' backward-word
-
-# trick to prevent errors on ssh with ghostty
-if [[ "$TERM_PROGRAM" == "ghostty" ]]; then
-    export TERM=xterm-256color
-fi
+source $ZSH/oh-my-zsh.sh
 
 fastfetch
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
