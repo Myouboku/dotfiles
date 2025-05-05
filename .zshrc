@@ -8,4 +8,7 @@ plugins=(git dnf node nvm npm fzf ssh ssh-agent gh zoxide thefuck tmux)
 
 source $ZSH/oh-my-zsh.sh
 
+# fucking annoying
+bindkey -r "^G"
+
 fastfetch
