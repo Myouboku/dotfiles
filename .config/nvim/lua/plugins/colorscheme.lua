@@ -1,7 +1,10 @@
 return {
   {
     "catppuccin",
-    opts = { transparent_background = true },
+    opts = {
+      transparent_background = true,
+      flavour = "mocha",
+    },
   },
   {
     "LazyVim/LazyVim",
