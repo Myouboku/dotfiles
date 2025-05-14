@@ -1,2 +1,4 @@
-font-family = CaskaydiaCove Nerd Font
-theme = gruvbox-material
+keybind = alt+é=esc:é
+keybind = alt+è=esc:è
+keybind = alt+ç=esc:ç
+keybind = alt+à=esc:à
