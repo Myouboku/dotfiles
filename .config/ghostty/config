@@ -3,3 +3,4 @@ keybind = alt+è=esc:è
 keybind = alt+ç=esc:ç
 keybind = alt+à=esc:à
 app-notifications = no-clipboard-copy
+confirm-close-surface = false
