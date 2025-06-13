@@ -4,3 +4,6 @@ keybind = alt+ç=esc:ç
 keybind = alt+à=esc:à
 app-notifications = no-clipboard-copy
 confirm-close-surface = false
+theme = dark:cyberdream,light:cyberdream-light
+background-opacity = 0.8
+background-blur = true

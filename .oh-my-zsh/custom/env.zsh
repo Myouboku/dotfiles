@@ -1,4 +1,4 @@
-export PATH=$PATH:$HOME/bin/Sencha/Cmd:$HOME/.local/bin
+export PATH=$PATH:$HOME/bin/Sencha/Cmd:$HOME/.local/bin:/opt/lazygit
 
 # neovim for everything
 export VISUAL="nvim"

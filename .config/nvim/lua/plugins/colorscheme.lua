@@ -1,13 +1,17 @@
 return {
   {
-    "catppuccin",
+    "scottmckendry/cyberdream.nvim",
     opts = {
-      transparent_background = true,
-      flavour = "mocha",
+      variant = "auto",
+      transparent = true,
+      italic_comments = true,
+      borderless_pickers = true,
     },
   },
   {
     "LazyVim/LazyVim",
-    opts = { colorscheme = "catppuccin" },
+    opts = {
+      colorscheme = "cyberdream",
+    },
   },
 }
