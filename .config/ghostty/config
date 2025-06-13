@@ -5,5 +5,5 @@ keybind = alt+à=esc:à
 app-notifications = no-clipboard-copy
 confirm-close-surface = false
 theme = dark:cyberdream,light:cyberdream-light
-background-opacity = 0.6
+background-opacity = 0.75
 background-blur = true
