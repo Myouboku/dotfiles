@@ -11,3 +11,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # bug with thefuck : https://github.com/nvbn/thefuck/issues/1153
 export THEFUCK_EXCLUDE_RULES='fix_file'
+
+# force the nvm init, not great but why the fuck would I spend more time on this
+nvm use 20
