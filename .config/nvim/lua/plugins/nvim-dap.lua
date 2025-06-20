@@ -1,5 +1,21 @@
 return {
   "mfussenegger/nvim-dap",
+  keys = {
+    {
+      "<leader>dO",
+      function()
+        require("dap").step_out()
+      end,
+      desc = "Step Out",
+    },
+    {
+      "<leader>do",
+      function()
+        require("dap").step_over()
+      end,
+      desc = "Step Over",
+    },
+  },
   opts = function()
     local dap = require("dap")
     local js_based_languages = { "typescript", "javascript", "typescriptreact" }
@@ -11,13 +27,10 @@ return {
           request = "launch",
           name = "node",
           program = "src/index.js",
-          address = "localhost",
-          port = 3000,
           cwd = "${workspaceFolder}/srv",
           env = {
             NODE_ENV = "development",
           },
-          console = "integratedTerminal",
         },
         {
           type = "pwa-node",
@@ -25,14 +38,10 @@ return {
           name = "nodemon",
           runtimeExecutable = "nodemon",
           program = "src/index.js",
-          address = "localhost",
-          port = 3000,
           cwd = "${workspaceFolder}/srv",
-          restart = true,
           env = {
             NODE_ENV = "development",
           },
-          console = "integratedTerminal",
         },
         {
           type = "pwa-node",
@@ -43,7 +52,6 @@ return {
           env = {
             NODE_ENV = "development",
           },
-          console = "integratedTerminal",
         },
         {
           type = "pwa-node",
@@ -51,7 +59,6 @@ return {
           name = "Attach",
           processId = require("dap.utils").pick_process,
           cwd = "${workspaceFolder}",
-          console = "integratedTerminal",
         },
       }
     end
