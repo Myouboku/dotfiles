@@ -2,18 +2,53 @@ return {
   "mfussenegger/nvim-dap",
   keys = {
     {
-      "<leader>dO",
+      "<F7>",
       function()
-        require("dap").step_out()
+        require("dap").toggle_breakpoint()
       end,
-      desc = "Step Out",
+      desc = "Toggle Breakpoint",
     },
     {
-      "<leader>do",
+      "<F19>",
+      function()
+        require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
+      end,
+      desc = "Breakpoint Condition",
+    },
+    {
+      "<F8>",
+      function()
+        require("dap").continue()
+      end,
+      desc = "Run/Continue",
+    },
+    {
+      "<F20>",
+      function()
+        require("dap").run_last()
+      end,
+      desc = "Run Last",
+    },
+    {
+      "<F9>",
       function()
         require("dap").step_over()
       end,
       desc = "Step Over",
+    },
+    {
+      "<F10>",
+      function()
+        require("dap").step_into()
+      end,
+      desc = "Step Into",
+    },
+    {
+      "<F22>",
+      function()
+        require("dap").step_out()
+      end,
+      desc = "Step Out",
     },
   },
   opts = function()

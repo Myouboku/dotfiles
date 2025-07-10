@@ -1,5 +1,15 @@
 return {
   "rcarriga/nvim-dap-ui",
+  keys = {
+    {
+      "<F6>",
+      function()
+        require("dapui").eval()
+      end,
+      desc = "Eval",
+      mode = { "n", "v" },
+    },
+  },
   config = function(_, opts)
     local dap = require("dap")
     local dapui = require("dapui")
@@ -24,7 +34,7 @@ return {
             size = 0.25,
           },
         },
-        position = "left",
+        position = "right",
         size = 40,
       },
       {
@@ -45,8 +55,9 @@ return {
 
     dapui.setup(opts)
 
-    dap.listeners.after.event_initialized["dapui_config"] = nil
-    dap.listeners.before.event_terminated["dapui_config"] = nil
-    dap.listeners.before.event_exited["dapui_config"] = nil
+    dap.listeners.before.attach.dapui_config = dapui.open
+    dap.listeners.before.launch.dapui_config = dapui.open
+    dap.listeners.before.event_terminated.dapui_config = dapui.close
+    dap.listeners.before.event_exited.dapui_config = dapui.close
   end,
 }
