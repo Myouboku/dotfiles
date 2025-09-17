@@ -13,7 +13,7 @@ fi
 BRANCH=$1
 REPO=$(basename "$ROOT")
 PARENT=$(dirname "$ROOT")
-WT="$PARENT/${REPO}-${BRANCH}"
+WT="$PARENT/${REPO}-${BRANCH//\//-}"
 
 if [[ -d $WT ]]; then
     cd "$WT"
@@ -52,14 +52,22 @@ if [[ -d $CONFIG_DIR ]]; then
 
     DEV_JSON="development.json"
     if [[ -f $DEV_JSON ]]; then
-        sed -i "s|\.\./\.\./${REPO}|../../${REPO}-${BRANCH}|g" $DEV_JSON
+        sed -i "s|\.\./\.\./${REPO}|../../${REPO}-${BRANCH//\//-}|g" $DEV_JSON
         sed -i "s|- dev|- ${BRANCH}|g" $DEV_JSON
 
         if [[ $NEW_BASE = "y" || $NEW_BASE = "Y" ]]; then
-            sed -i "s|DEVELOPMENT.fdb|${BRANCH}.fdb|gi" $DEV_JSON
+            sed -i "s|DEVELOPMENT.fdb|${BRANCH//\//-}.fdb|gi" $DEV_JSON
         fi
 
         cd "$WT"
         npm install
+
+        sencha app watch | while read line; do
+            echo "$line"
+            if [[ "$line" == *"Waiting for changes"* ]]; then
+                pkill -f "sencha"
+                break
+            fi
+        done
     fi
 fi
