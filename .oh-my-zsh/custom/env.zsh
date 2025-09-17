@@ -19,5 +19,5 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # bug with thefuck : https://github.com/nvbn/thefuck/issues/1153
 export THEFUCK_EXCLUDE_RULES='fix_file'
 
-# force the nvm init, not great but why the fuck would I spend more time on this
-nvm use 20
+# puppeteer cache path override for dev
+export PUPPETEER_CACHE_DIR="$HOME/.cache/puppeteer"
