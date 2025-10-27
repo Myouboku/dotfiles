@@ -44,6 +44,10 @@ if [[ $IS_NEW_BRANCH ]]; then
     fi
 fi
 
+if [[ -f "$ROOT/AGENTS.md" ]]; then
+    cp "$ROOT/AGENTS.md" "$WT/AGENTS.md"
+fi
+
 CONFIG_DIR="$WT/srv/config/"
 if [[ -d $CONFIG_DIR ]]; then
     mkdir -p $CONFIG_DIR

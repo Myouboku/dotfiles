@@ -14,3 +14,5 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     vim.g.baleia.automatically(vim.api.nvim_get_current_buf())
   end,
 })
+
+vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")

@@ -10,11 +10,8 @@ return {
       mode = { "n", "v" },
     },
   },
-  config = function(_, opts)
-    local dap = require("dap")
-    local dapui = require("dapui")
-
-    opts.layouts = {
+  opts = {
+    layouts = {
       {
         elements = {
           {
@@ -51,13 +48,6 @@ return {
         position = "bottom",
         size = 10,
       },
-    }
-
-    dapui.setup(opts)
-
-    dap.listeners.before.attach.dapui_config = dapui.open
-    dap.listeners.before.launch.dapui_config = dapui.open
-    dap.listeners.before.event_terminated.dapui_config = dapui.close
-    dap.listeners.before.event_exited.dapui_config = dapui.close
-  end,
+    },
+  },
 }
