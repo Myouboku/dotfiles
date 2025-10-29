@@ -12,7 +12,7 @@ for vpn in $VPNS; do
 done
 
 if [ -z "$ACTIVE_VPN" ]; then
-    echo "Disconnected"
+    echo "Off"
 else
     echo "$ACTIVE_VPN"
 fi
