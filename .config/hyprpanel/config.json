@@ -1,0 +1,59 @@
+{
+  "bar.customModules.storage.paths": [
+    "/"
+  ],
+  "menus.clock.time.military": true,
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Microsoft Edge",
+  "menus.dashboard.shortcuts.left.shortcut1.command": "microsoft-edge-stable",
+  "bar.battery.label": true,
+  "theme.bar.buttons.battery.enableBorder": false,
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "media"
+      ],
+      "middle": [
+        "windowtitle"
+      ],
+      "right": [
+        "cpu",
+        "ram",
+        "custom/vpn",
+        "volume",
+        "bluetooth",
+        "systray",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "theme.bar.floating": false,
+  "menus.clock.time.hideSeconds": false,
+  "menus.clock.weather.location": "Los Angeles",
+  "menus.clock.weather.unit": "metric",
+  "menus.clock.weather.enabled": false,
+  "theme.bar.location": "top",
+  "bar.autoHide": "never",
+  "bar.bluetooth.label": false,
+  "bar.network.label": true,
+  "bar.clock.format": "%a %d %b %H:%M",
+  "menus.media.hideAuthor": false,
+  "menus.media.hideAlbum": false,
+  "menus.media.displayTime": false,
+  "menus.media.displayTimeTooltip": false,
+  "theme.bar.menus.monochrome": false,
+  "wallpaper.pywal": false,
+  "wallpaper.image": "",
+  "wallpaper.enable": true,
+  "theme.bar.menus.background": "#11111b",
+  "theme.bar.menus.cards": "#1e1e2e",
+  "menus.dashboard.powermenu.avatar.image": "/home/hugo/Images/122337/9b84c3aa-05af-4ba0-96ea-e80977ba6eca-0.png",
+  "menus.dashboard.stats.enabled": false,
+  "menus.dashboard.shortcuts.enabled": true,
+  "menus.dashboard.directories.enabled": false,
+  "theme.bar.buttons.modules.cpu.enableBorder": false,
+  "bar.customModules.cpu.round": true,
+  "bar.customModules.ram.labelType": "percentage"
+}

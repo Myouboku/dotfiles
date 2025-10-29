@@ -1,0 +1,11 @@
+{
+  "custom/vpn": {
+    "icon": "󰖂",
+    "label": "{}",
+    "execute": "~/scripts/vpn_status.sh",
+    "interval": 2000,
+    "actions": {
+      "onLeftClick": "bash ~/scripts/vpn_menu.sh"
+    }
+  }
+}
