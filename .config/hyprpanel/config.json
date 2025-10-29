@@ -1,7 +1,5 @@
 {
-  "bar.customModules.storage.paths": [
-    "/"
-  ],
+  "bar.customModules.storage.paths": ["/"],
   "menus.clock.time.military": true,
   "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Microsoft Edge",
   "menus.dashboard.shortcuts.left.shortcut1.command": "microsoft-edge-stable",
@@ -9,16 +7,11 @@
   "theme.bar.buttons.battery.enableBorder": false,
   "bar.layouts": {
     "0": {
-      "left": [
-        "dashboard",
-        "workspaces",
-        "media"
-      ],
-      "middle": [
-        "windowtitle"
-      ],
+      "left": ["dashboard", "workspaces", "media"],
+      "middle": ["windowtitle"],
       "right": [
         "cpu",
+        "cputemp",
         "ram",
         "custom/vpn",
         "volume",
@@ -55,5 +48,15 @@
   "menus.dashboard.directories.enabled": false,
   "theme.bar.buttons.modules.cpu.enableBorder": false,
   "bar.customModules.cpu.round": true,
-  "bar.customModules.ram.labelType": "percentage"
+  "bar.customModules.ram.labelType": "percentage",
+  "bar.workspaces.showWsIcons": true,
+  "bar.workspaces.showApplicationIcons": true,
+  "bar.workspaces.workspaceMask": false,
+  "bar.workspaces.show_numbered": false,
+  "bar.workspaces.monitorSpecific": false,
+  "bar.workspaces.show_icons": false,
+  "theme.bar.buttons.workspaces.enableBorder": false,
+  "bar.workspaces.showAllActive": true,
+  "bar.workspaces.workspaces": 5
 }
+
