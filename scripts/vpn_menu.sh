@@ -20,7 +20,7 @@ while IFS= read -r vpn; do
     fi
 done <<<"$VPNS"
 
-SELECTED=$(echo -e "$OPTIONS" | rofi -dmenu -p "VPN:" -no-custom | sed 's/^[✓ ]* //')
+SELECTED=$(echo -e "$OPTIONS" | rofi -dmenu -p "VPN" -no-custom | sed 's/^[✓ ]* //')
 if [ -n "$SELECTED" ]; then
     if [ "$SELECTED" = "$ACTIVE_VPN" ]; then
         nmcli connection down "$SELECTED"
