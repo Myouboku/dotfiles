@@ -48,7 +48,7 @@
   "theme.bar.menus.monochrome": false,
   "wallpaper.pywal": false,
   "wallpaper.image": "",
-  "wallpaper.enable": true,
+  "wallpaper.enable": false,
   "theme.bar.menus.background": "#11111b",
   "theme.bar.menus.cards": "#1e1e2e",
   "menus.dashboard.powermenu.avatar.image": "/home/hugo/Images/122337/9b84c3aa-05af-4ba0-96ea-e80977ba6eca-0.png",
@@ -76,5 +76,7 @@
   "theme.bar.margin_sides": "0em",
   "theme.bar.buttons.padding_y": "0.2rem",
   "theme.bar.dropdownGap": "2.9em",
-  "theme.bar.margin_top": "0.5em"
+  "theme.bar.margin_top": "0.5em",
+  "bar.customModules.cpu.label": true,
+  "bar.customModules.ram.round": true
 }

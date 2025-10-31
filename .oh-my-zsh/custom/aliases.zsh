@@ -10,3 +10,4 @@ alias dev='NODE_ENV=development node src/index.js'
 alias testapi='NODE_ENV=test npm run pretest:api && (cd srv && NODE_ENV=test npx mocha --parallel --exit)'
 alias test='NODE_ENV=test npx mocha --parallel --exit'
 alias bright='systemctl --user restart plasma-powerdevil.service'
+alias ncdu="ncdu --color dark"
