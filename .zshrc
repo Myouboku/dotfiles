@@ -2,6 +2,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="suvash" # set by `omz`
 ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOQUIT=false
 
 zstyle ':omz:plugins:eza' 'git-status' yes
 zstyle ':omz:plugins:eza' 'icons' yes
