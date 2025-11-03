@@ -26,7 +26,8 @@ return {
         desc = "Harpoon to File 1",
       },
       {
-        "<A-é>",
+        -- kitty is weird
+        "<A-2>",
         function()
           require("harpoon"):list():select(2)
         end,
