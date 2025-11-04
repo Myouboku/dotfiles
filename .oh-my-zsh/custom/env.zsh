@@ -2,8 +2,6 @@
 export PATH=$PATH:$HOME/bin/Sencha/Cmd
 # local binaries
 export PATH=$PATH:$HOME/.local/bin
-# lazygit
-export PATH=$PATH:/opt/lazygit
 # opencode
 export PATH=$PATH:$HOME/.opencode/bin
 
