@@ -11,3 +11,4 @@ alias testapi='NODE_ENV=test npm run pretest:api && (cd srv && NODE_ENV=test npx
 alias test='NODE_ENV=test npx mocha --parallel --exit'
 alias bright='systemctl --user restart plasma-powerdevil.service'
 alias ncdu="ncdu --color dark"
+alias s="kitten ssh"
