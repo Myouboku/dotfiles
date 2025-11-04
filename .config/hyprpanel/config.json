@@ -22,7 +22,7 @@
         "cpu",
         "cputemp",
         "ram",
-        "custom/vpn",
+        "network",
         "volume",
         "bluetooth",
         "systray",
@@ -78,5 +78,10 @@
   "theme.bar.dropdownGap": "2.9em",
   "theme.bar.margin_top": "0.5em",
   "bar.customModules.cpu.label": true,
-  "bar.customModules.ram.round": true
+  "bar.customModules.ram.round": true,
+  "bar.customModules.netstat.label": true,
+  "bar.network.showWifiInfo": false,
+  "bar.network.showEthernet": true,
+  "bar.network.showWifi": false,
+  "bar.network.showVpn": true
 }
