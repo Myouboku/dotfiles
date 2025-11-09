@@ -13,20 +13,21 @@
         "dashboard",
         "workspaces",
         "media",
-        "cava"
+        "windowtitle"
       ],
       "middle": [
-        "windowtitle"
+        "clock"
       ],
       "right": [
         "cpu",
         "cputemp",
         "ram",
+        "gpu",
+        "gputemp",
         "network",
         "volume",
         "bluetooth",
         "systray",
-        "clock",
         "notifications"
       ]
     }
@@ -38,9 +39,9 @@
   "menus.clock.weather.enabled": false,
   "theme.bar.location": "top",
   "bar.autoHide": "never",
-  "bar.bluetooth.label": false,
+  "bar.bluetooth.label": true,
   "bar.network.label": true,
-  "bar.clock.format": "%a %d %b %H:%M",
+  "bar.clock.format": "%d/%m/%g - %H:%M",
   "menus.media.hideAuthor": false,
   "menus.media.hideAlbum": false,
   "menus.media.displayTime": false,
@@ -58,11 +59,11 @@
   "theme.bar.buttons.modules.cpu.enableBorder": false,
   "bar.customModules.cpu.round": true,
   "bar.customModules.ram.labelType": "percentage",
-  "bar.workspaces.showWsIcons": true,
-  "bar.workspaces.showApplicationIcons": true,
+  "bar.workspaces.showWsIcons": false,
+  "bar.workspaces.showApplicationIcons": false,
   "bar.workspaces.workspaceMask": false,
-  "bar.workspaces.show_numbered": false,
-  "bar.workspaces.monitorSpecific": false,
+  "bar.workspaces.show_numbered": true,
+  "bar.workspaces.monitorSpecific": true,
   "bar.workspaces.show_icons": false,
   "theme.bar.buttons.workspaces.enableBorder": false,
   "bar.workspaces.showAllActive": true,
@@ -83,5 +84,9 @@
   "bar.network.showWifiInfo": false,
   "bar.network.showEthernet": true,
   "bar.network.showWifi": false,
-  "bar.network.showVpn": true
+  "bar.network.showVpn": true,
+  "bar.workspaces.numbered_active_indicator": "highlight",
+  "notifications.clearDelay": 0,
+  "notifications.soundName": "message-new-instant",
+  "notifications.playSound": true
 }
