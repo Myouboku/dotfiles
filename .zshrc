@@ -16,3 +16,5 @@ export PATH=$PATH:$HOME/.cargo/bin
 plugins=(git nvm npm fzf ssh ssh-agent gh zoxide eza sudo tmux zsh-autosuggestions zsh-syntax-highlighting you-should-use)
 
 source $ZSH/oh-my-zsh.sh
+
+eval $(thefuck --alias)
