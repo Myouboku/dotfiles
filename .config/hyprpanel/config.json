@@ -88,6 +88,6 @@
   "bar.workspaces.numbered_active_indicator": "highlight",
   "notifications.clearDelay": 0,
   "notifications.soundName": "message-new-instant",
-  "notifications.playSound": true,
+  "notifications.playSound": false,
   "notifications.customSoundPath": "/home/hugo/Téléchargements/wet-fart-6139.mp3"
 }
