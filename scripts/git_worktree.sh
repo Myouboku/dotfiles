@@ -1,4 +1,4 @@
-#! /bin/bash -
+#! /bin/bash
 
 ROOT=$(git rev-parse --show-toplevel 2>/dev/null) || {
     echo "Error : not in a git repo" >&2
@@ -35,9 +35,8 @@ else
 fi
 
 if [[ $IS_NEW_BRANCH ]]; then
-    echo "Do you want to make a new database for this branch ? [N/y]"
+    echo "Do you want to make a new database for this branch ? [y/N] :"
     read -r NEW_BASE
-
     if [[ $NEW_BASE = "y" || $NEW_BASE = "Y" ]]; then
         DATAS="{ \"source\": \"development.fdb\", \"destination\": \"$BRANCH\" }"
         curl -X POST -H 'Content-Type: application/json' -d $DATAS http://192.168.10.51:1234/files/xplanet/duplicate
@@ -60,14 +59,23 @@ if [[ -d $CONFIG_DIR ]]; then
         fi
 
         cd "$WT"
-        npm install
 
-        sencha app watch | while read line; do
-            echo "$line"
-            if [[ "$line" == *"Waiting for changes"* ]]; then
-                pkill -f "sencha"
-                break
-            fi
-        done
+        echo "Do you want to sync npm packages ? [Y/n] :"
+        read -r SYNC_NPM
+        if [[ $SYNC_NPM != "n" && $SYNC_NPM != "N" ]]; then
+            npm install
+        fi
+
+        echo "Do you want to build front ? [Y/n] :"
+        read -r SENCHA_WATCH
+        if [[ $SENCHA_WATCH != "n" && $SENCHA_WATCH != "N" ]]; then
+            sencha app watch | while read line; do
+                echo "$line"
+                if [[ "$line" == *"Waiting for changes"* ]]; then
+                    pkill -f "sencha"
+                    break
+                fi
+            done
+        fi
     fi
 fi
