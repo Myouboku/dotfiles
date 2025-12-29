@@ -1,5 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "plugin": ["@tarquinen/opencode-dcp@latest"],
   "mcp": {
     "sequential-thinking": {
       "type": "local",
@@ -9,40 +10,6 @@
         "@modelcontextprotocol/server-sequential-thinking"
       ]
     },
-    "serena-plan": {
-      "type": "local",
-      "command": [
-        "uvx",
-        "--from",
-        "git+https://github.com/oraios/serena",
-        "serena",
-        "start-mcp-server",
-        "--enable-web-dashboard",
-        "false",
-        "--context",
-        "ide-assistant",
-        "--mode",
-        "planning"
-      ],
-      "enabled": false
-    },
-    "serena-build": {
-      "type": "local",
-      "command": [
-        "uvx",
-        "--from",
-        "git+https://github.com/oraios/serena",
-        "serena",
-        "start-mcp-server",
-        "--enable-web-dashboard",
-        "false",
-        "--context",
-        "ide-assistant",
-        "--mode",
-        "editing"
-      ],
-      "enabled": false
-    },
     "context7": {
       "type": "remote",
       "url": "https://mcp.context7.com/mcp",
@@ -51,19 +18,8 @@
       }
     }
   },
-  "tools": {
-    "serena-*": false
-  },
   "agent": {
-    "plan": {
-      "tools": {
-        "serena-plan": true
-      }
-    },
     "build": {
-      "tools": {
-        "serena-build": true
-      },
       "permission": {
         "bash": {
           "git *": "ask",

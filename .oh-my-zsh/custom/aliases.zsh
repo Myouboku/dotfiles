@@ -12,3 +12,4 @@ alias test='NODE_ENV=test npx mocha --parallel --exit'
 alias bright='systemctl --user restart plasma-powerdevil.service'
 alias ncdu="ncdu --color dark"
 alias s="kitten ssh"
+alias v='nvim'
