@@ -89,5 +89,6 @@
   "notifications.clearDelay": 0,
   "notifications.soundName": "message-new-instant",
   "notifications.playSound": false,
-  "notifications.customSoundPath": "/home/hugo/Téléchargements/wet-fart-6139.mp3"
+  "notifications.customSoundPath": "/home/hugo/Téléchargements/wet-fart-6139.mp3",
+  "bar.media.format": "{title: - }{artist}"
 }
