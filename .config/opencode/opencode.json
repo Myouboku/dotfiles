@@ -1,9 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": [
-    "@tarquinen/opencode-dcp@latest",
-    "@franlol/opencode-md-table-formatter@0.0.3"
-  ],
   "mcp": {
     "sequential-thinking": {
       "type": "local",
