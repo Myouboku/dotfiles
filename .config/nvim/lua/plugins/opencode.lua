@@ -4,6 +4,11 @@ return {
     { "folke/snacks.nvim" },
   },
   config = function()
+    ---@type opencode.Opts
+    vim.g.opencode_opts = {
+      -- maybe
+    }
+
     vim.keymap.set({ "n", "x" }, "<leader>oa", function()
       require("opencode").ask("@this: ", { submit = true })
     end, { desc = "Ask opencode" })
@@ -20,5 +25,15 @@ return {
     vim.keymap.set("n", "goo", function()
       return require("opencode").operator("@this ") .. "_"
     end, { expr = true, desc = "Add line to opencode" })
+
+    require("lualine").setup({
+      sections = {
+        lualine_z = {
+          {
+            require("opencode").statusline,
+          },
+        },
+      },
+    })
   end,
 }
