@@ -4,7 +4,7 @@ alias port-forwarding="\$HOME/scripts/port_forwarding.sh"
 alias unitstatus="\$HOME/scripts/unitstatus.sh"
 alias cu="\$HOME/scripts/checkupdates.sh"
 alias wt="source \$HOME/scripts/git_worktree.sh"
-alias up="flatpak update && yay"
+alias update="flatpak update && yay"
 alias devm='NODE_ENV=development nodemon --inspect=0.0.0.0:9229 -e js,cjs,mjs,sql src/index.js'
 alias dev='NODE_ENV=development node --inspect=0.0.0.0:9229 src/index.js'
 alias testapi='NODE_ENV=test npm run pretest:api && (cd srv && NODE_ENV=test npx mocha --parallel --exit)'
