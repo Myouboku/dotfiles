@@ -4,5 +4,5 @@
 vim.opt.scrolloff = 10
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
--- vim.g.snacks_animate = false
+vim.g.snacks_animate = false
 vim.o.autoread = true
