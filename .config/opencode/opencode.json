@@ -1,6 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": ["opencode-anthropic-auth@latest"],
   "mcp": {
     "context7": {
       "type": "remote",
@@ -12,20 +11,6 @@
     "browsermcp": {
       "type": "local",
       "command": ["npx", "-y", "@browsermcp/mcp@latest"]
-    }
-  },
-  "agent": {
-    "build": {
-      "permission": {
-        "bash": {
-          "git *": "ask",
-          "git log": "allow",
-          "git diff": "allow",
-          "git commit": "deny",
-          "rm *": "ask",
-          "jq": "allow"
-        }
-      }
     }
   }
 }
