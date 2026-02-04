@@ -19,6 +19,3 @@ export THEFUCK_EXCLUDE_RULES='fix_file'
 
 # puppeteer cache path override for dev
 export PUPPETEER_CACHE_DIR="$HOME/.cache/puppeteer"
-
-# fix for ghostty
-export GTK_IM_MODULE=simple
