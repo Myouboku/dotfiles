@@ -14,3 +14,4 @@ alias ncdu="ncdu --color dark"
 alias s="kitten ssh"
 alias v='nvim'
 alias awt="\$HOME/scripts/analyze-worktrees.sh"
+alias oc="opencode"
