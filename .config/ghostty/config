@@ -1,4 +1,5 @@
 keybind = alt+digit_2=esc:2
+keybind = ctrl+é=text:\x022
 app-notifications = no-clipboard-copy
 confirm-close-surface = false
 theme = Catppuccin Mocha
