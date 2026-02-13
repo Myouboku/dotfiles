@@ -64,15 +64,13 @@ if [[ -d $CONFIG_DIR ]]; then
 
         cd "$WT"
 
-        echo "Do you want to sync npm packages ? [Y/n] :"
-        read -r SYNC_NPM
-        if [[ $SYNC_NPM != "n" && $SYNC_NPM != "N" ]]; then
-            npm install
-        fi
+        npm install
+        npm run generate:sqlrequests
+        npm run pretest:api
 
-        echo "Do you want to build front ? [Y/n] :"
+        echo "Do you want to build front ? [y/N] :"
         read -r SENCHA_WATCH
-        if [[ $SENCHA_WATCH != "n" && $SENCHA_WATCH != "N" ]]; then
+        if [[ $SENCHA_WATCH == "y" || $SENCHA_WATCH == "Y" ]]; then
             sencha app watch | while read line; do
                 echo "$line"
                 if [[ "$line" == *"Waiting for changes"* ]]; then
