@@ -47,9 +47,6 @@ CONFIG_DIR="$WT/srv/config/"
 if [[ -d $CONFIG_DIR ]]; then
     mkdir -p $CONFIG_DIR
 
-    cp "$ROOT/opencode.json" "$WT/opencode.json"
-    cp "$ROOT/AGENTS.md" "$WT/AGENTS.md"
-
     cp -R "$ROOT/srv/config/." $CONFIG_DIR
     cd $CONFIG_DIR
 
