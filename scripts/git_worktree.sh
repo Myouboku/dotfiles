@@ -63,7 +63,7 @@ if [[ -d $CONFIG_DIR ]]; then
 
         npm install
         npm run generate:sqlrequests
-        npm run pretest:api
+        # npm run pretest:api
 
         echo "Do you want to build front ? [y/N] :"
         read -r SENCHA_WATCH

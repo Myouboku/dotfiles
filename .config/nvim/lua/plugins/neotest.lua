@@ -1,7 +1,7 @@
 return {
   "nvim-neotest/neotest",
   dependencies = {
-    { "adrigzr/neotest-mocha", commit = "342664d54d2177cd0b21742ddf8c447ff278df46" },
+    { "adrigzr/neotest-mocha" },
   },
   opts = {
     adapters = {
@@ -26,8 +26,8 @@ return {
             "--reporter=json",
             "--reporter-options=output=" .. context.results_path,
             -- "--grep=" .. clean_pattern,
-            -- "--grep=" .. context.test_name_pattern,
-            "--grep=" .. context.test_name,
+            "--grep=" .. context.test_name_pattern,
+            -- "--grep=" .. context.test_name,
             context.path,
           }
         end,
