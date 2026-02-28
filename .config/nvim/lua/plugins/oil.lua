@@ -1,12 +1,13 @@
 return {
   "stevearc/oil.nvim",
+  ---@module 'oil'
+  ---@type oil.SetupOpts
   opts = {
     view_options = {
       show_hidden = true,
     },
   },
   dependencies = { { "nvim-mini/mini.icons", opts = {} } },
-  keys = {
-    { "-", "<cmd>Oil<cr>", desc = "Oil" },
-  },
+  -- dependencies = { "nvim-tree/nvim-web-devicons" },
+  lazy = false,
 }

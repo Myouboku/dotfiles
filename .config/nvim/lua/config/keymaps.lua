@@ -26,3 +26,4 @@ vim.keymap.set({ "n", "i", "v" }, "<A-k>", function()
     end
   end
 end)
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
