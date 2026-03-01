@@ -18,16 +18,11 @@ return {
           --
           -- Not specifying 'command_args' will use the defaults below
 
-          -- Clean test_name_pattern: remove backticks that break grep regex
-          -- local clean_pattern = context.test_name_pattern:gsub("`", "")
-
           return {
             "--full-trace",
             "--reporter=json",
             "--reporter-options=output=" .. context.results_path,
-            -- "--grep=" .. clean_pattern,
             "--grep=" .. context.test_name_pattern,
-            -- "--grep=" .. context.test_name,
             context.path,
           }
         end,

@@ -25,7 +25,7 @@ set_dark() {
     sed -i "s/^color_scheme_path=.*/color_scheme_path=\/usr\/share\/qt6ct\/colors\/${QT_COLOR_DARK}.conf/" \
         ~/.config/qt6ct/qt6ct.conf
 
-    notify-send "Theme" "Dark theme enabled" 2>/dev/null
+    # notify-send "Theme" "Dark theme enabled" 2>/dev/null
     echo "dark"
 }
 
@@ -41,7 +41,7 @@ set_light() {
     sed -i "s/^color_scheme_path=.*/color_scheme_path=\/usr\/share\/qt6ct\/colors\/${QT_COLOR_LIGHT}.conf/" \
         ~/.config/qt6ct/qt6ct.conf
 
-    notify-send "Theme" "Light theme enabled" 2>/dev/null
+    # notify-send "Theme" "Light theme enabled" 2>/dev/null
     echo "light"
 }
 
