@@ -26,7 +26,7 @@ return {
             context.path,
           }
         end,
-        env = { NODE_ENV = "test", CI = true },
+        env = { NODE_ENV = "test", CI = true, NODE_NO_WARNINGS = 1 },
         cwd = function(path)
           return vim.fn.getcwd()
         end,
