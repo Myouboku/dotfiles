@@ -1,6 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="suvash" # set by `omz`
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOQUIT=false
 ZOXIDE_CMD_OVERRIDE=cd
@@ -19,3 +18,4 @@ plugins=(git nvm npm fzf ssh ssh-agent gh zoxide eza sudo tmux zsh-autosuggestio
 source $ZSH/oh-my-zsh.sh
 
 eval $(thefuck --alias)
+eval "$(starship init zsh)"
