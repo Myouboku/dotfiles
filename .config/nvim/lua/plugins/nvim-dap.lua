@@ -66,17 +66,7 @@ return {
           env = {
             NODE_ENV = "development",
           },
-        },
-        {
-          type = "pwa-node",
-          request = "launch",
-          name = "nodemon",
-          runtimeExecutable = "nodemon",
-          program = "src/index.js",
-          cwd = "${workspaceFolder}/srv",
-          env = {
-            NODE_ENV = "development",
-          },
+          console = "integratedTerminal",
         },
         {
           type = "pwa-node",
@@ -87,6 +77,7 @@ return {
           env = {
             NODE_ENV = "development",
           },
+          console = "integratedTerminal",
         },
         {
           type = "pwa-node",
@@ -94,6 +85,7 @@ return {
           name = "Attach",
           processId = require("dap.utils").pick_process,
           cwd = "${workspaceFolder}",
+          console = "integratedTerminal",
         },
       }
     end

@@ -4,6 +4,8 @@ export PATH=$PATH:$HOME/bin/Sencha/Cmd
 export PATH=$PATH:$HOME/.local/bin
 # opencode
 export PATH=$PATH:$HOME/.opencode/bin
+# go packages
+export PATH=$PATH:$HOME/go/bin
 
 # neovim for everything
 export VISUAL="nvim"

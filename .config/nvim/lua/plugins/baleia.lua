@@ -1,1 +1,2 @@
-return { "m00qek/baleia.nvim" }
+-- return { "m00qek/baleia.nvim" }
+return {}
