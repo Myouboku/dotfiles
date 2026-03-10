@@ -394,7 +394,9 @@ set -g history-limit 10000
 set -g status-keys vi
 set -g mode-keys vi
 
+# tmux + ssh
 set -s extended-keys off
+set -g allow-passthrough on
 
 # replace C-b by C-a instead of using both prefixes
 # set -gu prefix2
